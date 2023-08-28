@@ -1,12 +1,12 @@
 package main.java.aluno;
 
-/* 
- *• Crie uma classe em Java chamada Aluno contendo as variáveis de instância numeroAluno (int), nome (String), idade (int), p1 (float) e p2 (float), 
- *• Crie os construtores 
- *• Crie os métodos notaFinal() 
- *- que calcula e retorna a média final do aluno 
- *  dadosAluno() 
- *- que retorna os valores de numeroAluno, nome e idade.  
+/*
+ * Crie uma classe em Java chamada Aluno contendo as variáveis de instância numeroAluno (int), nome (String), idade (int), p1 (float) e p2 (float),
+ *• Crie os construtores
+ *• Crie os métodos notaFinal()
+ *- que calcula e retorna a média final do aluno
+ *  dadosAluno()
+ *- que retorna os valores de numeroAluno, nome e idade.
 */
 public class Aluno {
   public int numeroAluno;
