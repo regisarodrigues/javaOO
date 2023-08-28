@@ -121,7 +121,7 @@ public class Aluno {
     }
   }
 
-  public void dadosAluno() {
-    System.out.println("Código aluno: " + this.numeroAluno + "\nNome: " + this.nome + "\nIdade: " + this.idade);
+  public String dadosAluno() {
+    return "Código aluno: " + this.numeroAluno + "\nNome: " + this.nome + "\nIdade: " + this.idade;
   }
 }

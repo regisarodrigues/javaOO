@@ -9,8 +9,8 @@ public class TesteAluno {
   public static void main(String[] args) {
     Aluno al1 = new Aluno(123456, "Maria", 20, 9, 9);
 
-    al1.dadosAluno();
+    System.out.println(al1.dadosAluno());
     al1.notaFinal();
-    al1.passou();
+    System.out.println(al1.passou());
   }
 }
