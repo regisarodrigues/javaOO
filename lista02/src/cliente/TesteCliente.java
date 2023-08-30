@@ -13,7 +13,7 @@ package cliente;
 public class TesteCliente {
   public static void main(String[] args) {
     // cliente 01
-    Cliente cl1 = new Cliente("12345-78", "1234-6", "Fulano", 500);
+    Cliente cl1 = new Cliente("123456-8", "1234-6", "Fulano", 500);
     cl1.realizarDeposito(150);
     cl1.realizarSaque(230);
     System.out.println(cl1.dadosCliente());

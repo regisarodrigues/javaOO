@@ -9,7 +9,7 @@ package aluno;
  * A idade, e as notas p1 e p2 não podem ser negativas.
  *
  * b) Crie os métodos public notaFinal() que calcula e imprime a média final do aluno,
- * e dadosAluno() - que imprime as variáveis de instância numeroAluno,
+ * e dadosAluno() que imprime as variáveis de instância numeroAluno,
  * nome e idade. Crie um construtor para inicialização das variáveis
  * quando um objeto da classe for criado. Forneça um construtor sem argumento com valores
  * default caso nenhum inicializador seja fornecido
@@ -56,8 +56,8 @@ public class Aluno {
     if (nome.length() >= 3 && nome.length() <= 30) {
       this.nome = nome;
     } else {
-      this.nome = null;
-      System.out.println("Nome do cliente deve conter de 3 à 30 caracteres, nome foi atribuído nulo.");
+      this.nome = "";
+      System.out.println("Nome do cliente deve conter de 3 à 30 caracteres, nome foi atribuído vazio.");
     }
   }
 
@@ -72,7 +72,6 @@ public class Aluno {
       this.idade = 0;
       System.out.println("Idade inválida, foi atribuida 0");
     }
-    this.idade = idade;
   }
 
   public float getN1() {

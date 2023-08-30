@@ -37,11 +37,11 @@ public class Cliente {
   }
 
   public void setNumeroConta(String numeroConta) {
-    if (numeroConta.length() == 8 && numeroConta.contains("-")) {
+    if (numeroConta.length() == 8 && numeroConta.charAt(6) == '-') {
       this.numeroConta = numeroConta;
     } else {
-      this.numeroConta = "0";
-      System.out.println("Número da conta inválido, foi atribuido 0.");
+      this.numeroConta = "";
+      System.out.println("Número da conta inválido, foi atribuido vazio.");
     }
   }
 
@@ -50,11 +50,11 @@ public class Cliente {
   }
 
   public void setNumeroAgencia(String numeroAgencia) {
-    if (numeroAgencia.length() == 6 && numeroAgencia.contains("-")) {
+    if (numeroAgencia.length() == 6 && numeroAgencia.charAt(4) == '-') {
       this.numeroAgencia = numeroAgencia;
     } else {
-      this.numeroAgencia = "0";
-      System.out.println("Número da agência inválido, foi atribuido 0.");
+      this.numeroAgencia = "";
+      System.out.println("Número da agência inválido, foi atribuido vazio.");
     }
   }
 
@@ -78,21 +78,16 @@ public class Cliente {
     if (saldo >= 0) {
       this.saldo = saldo;
     } else {
-      this.saldo = 0;
-      System.out.println("Valor do saldo inválido, foi atribuido 0.");
+      System.out.println("Valor do saldo inválido!");
     }
   }
 
   public void realizarDeposito(float deposito) {
-    this.saldo += deposito;
+    setSaldo(this.saldo + deposito);
   }
 
   public void realizarSaque(float saque) {
-    if (saque <= this.saldo) {
-      this.saldo -= saque;
-    } else {
-      System.out.println("Saldo insuficiente!");
-    }
+    setSaldo(this.saldo - saque);
   }
 
   public String dadosCliente() {
